@@ -1,0 +1,10 @@
+URL: https://github.com/camimilli/DI-Bootcamp/blob/main/Week1/Day1/DailyChallenge/DailyChallenge.py
+suggestions for improvement:
+- The loop building the string character by character is inefficient.  It's unnecessarily re-assigning `sentence_builder` in each iteration.  A more efficient approach would be to use string slicing.
+- The bonus section (shuffling) is well-implemented, but could be made more clear by separating it into a function.
+Brief justification:
+- correctness: The code accurately implements all the core requirements of the chapter. It correctly handles string length validation, prints the first and last characters, and builds the string character by character using a for loop. The bonus feature of shuffling the string is also correctly implemented, which is above and beyond the requirements.  The only minor issue is that the character-by-character string building is slightly less efficient than it could be. This is why the score is 90/100 instead of 100/100.
+- readability: The code is well-structured, easy to follow, and uses clear variable names. The comments are not strictly necessary but improve understanding. The use of f-strings for output enhances readability.
+- performance: The code's performance is good. The only potential performance hit is mentioned in the feedback.  For inputs of reasonable length, this is negligible, however.
+- security: No security vulnerabilities are present in this code. It only takes user input and performs string manipulations; there's no interaction with external systems or data storage.
+

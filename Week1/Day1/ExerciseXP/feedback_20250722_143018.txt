@@ -1,0 +1,11 @@
+URL: https://github.com/camimilli/DI-Bootcamp/blob/main/Week1/Day1/ExerciseXP/ExercisesXP.py
+suggestions for improvement:
+- In Exercise 3, the code should print the output instead of just showing the boolean values.  The exercise asks for a prediction of the output, so the code should reflect that prediction, but it's better to explicitly print them.
+- Exercise 5's `info` variable could be improved by using more descriptive language and better formatting for readability. Consider adding commas and more sophisticated sentence structure.
+- In Exercise 8, while the code functions correctly, error handling for non-alphanumeric input could be added to make it more robust.
+Brief justification:
+- correctness: The code correctly addresses almost all exercises, demonstrating understanding of print statements, variables, mathematical operations, comparison operators, if statements, and user input, all topics covered in the chapter. Exercise 3 is marked down because it displays the correct boolean values but doesn't print them as output as the exercise requires. The other exercises fulfill the instructions accurately.
+- readability: The code is well-structured and easy to follow. Variable names are descriptive, and the code's logic is straightforward.  Minor improvements to formatting and sentence structure in Exercise 5 would enhance readability further. 
+- performance: The code's performance is efficient for all tasks. No unnecessary computations or loops are used, making it suitable for all the scenarios described.
+- security: The code does not involve any security risks since it only performs basic input/output operations and calculations. There is no interaction with external systems or data storage that could expose vulnerabilities.
+
