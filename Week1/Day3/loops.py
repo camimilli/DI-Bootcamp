@@ -121,3 +121,9 @@ while current_number <= 10:
     if 3 < current_number < 7:
         continue # go back to the beginning of the loop 
     print(current_number)
+
+
+# WHILE LOOP: Used to execute a block of code an unknown amount of times 
+#             until a certain condition is True / until there is a "break" keyword
+
+# counter is called "i" for "iteration"
