@@ -1,6 +1,5 @@
 # DICTIONARIES - No index, instead, we access using pairs (key-value, also known as "entry")
-#                Ordered, mutable. 
-#                Used for complex data, named data
+#                Ordered, changeable (mutable). No duplicates
 #                KEY should be IMMUTABLE value (e.g: strings), can't be empty (can have data type "None")
 #                VALUE can be ANY data type (int, string, list...)
 
@@ -13,8 +12,6 @@ dic_constructor = {'name': 'juliana',
                    }
 
 
-# ACCESS INFO 
-# dictionary_name[key] 
 
 student_info = {
     'first_name': 'Harry',
@@ -26,8 +23,11 @@ student_info = {
     'best_friends': ('Ron Weasley', 'Hermione Granger')
 }
 
-# access one value 
-print(student_info["first_name"])
+# Accessing Data
+print(student_info['last_name']) # Potter
+print(student_info['houses']) # {'main': Gryffindor, 'secondary': 'Slytherin'}
+
+print(student_info['pets'][1]) # Buckbeak
 
 sample_dict = {
     "class": {
@@ -98,17 +98,40 @@ for v in student_info.values():
 for key, value in student_info.items():
     print(key, value)
 
-# using items() to create tuples to unpack the values
+# using items() returns a dictionary object
+#resembles a 2d list of tuples {(),(),()}
 # first index is key, second index is value
-for k_value in student_info.items():
-    print(k_value)
+#can also use one value for both k_value 
+for key,value in student_info.items():
+    print(f"{key}: {value}")
 
 # update() - like append() for lists
-# add another key-value at the end of a dictionary 
+# insert a NEW key-value pair or UPDATE an existing key-value pair
 # better to use update than assignment form as it's more clear in code
-
 student_info.update({'patronus': 'stag'})
 
+# get() - returns the value of the specified key, if key doesn't exit return none 
+print(student_info.get('pets')) # returns pets
+print(student_info.get('Japan')) # returns None
+
+# zip() - used to combine related information 
+names = ['Camila', 'Niv', 'Mushu']
+addresses = ['Ramat Gan', 'Jerusalem', 'Tel Aviv']
+
+print(list(zip(names, addresses)))
+
+# pop() like del but it returns the value you removed (del doesn't)
+# takes an optional 2nd arg, default value to return if the key is not found (used to avoid KeyError)
+student_info.pop('address')
+print(student_info)
+
+# popitem() - removes latest key-value pair inserted
+student_info.popitem('pets')
+print(student_info)
+
+# clear() - deletes all key-value pairs in dictionary
+student_info.clear()
+print(student_info)
 
 # EXERCISE 2 - Delete set of keys from Python Dictionary
 
@@ -128,13 +151,6 @@ for k in keys_to_remove:
 
 print(sample_dict)
 
-# OTHER USEFUL BUILDING FUNCTIONS: zip()
-# used to combine related information 
-
-names = ['Camila', 'Niv', 'Mushu']
-addresses = ['Ramat Gan', 'Jerusalem', 'Tel Aviv']
-
-print(list(zip(names, addresses)))
 
 # creating dictionary where topic is key and grades is value
 topics = ['Math', 'Grammar', 'History', 'Sports']

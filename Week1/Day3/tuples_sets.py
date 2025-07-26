@@ -42,11 +42,16 @@ print(lang4) # PT
 some_set = set() # builder, you can create set straight or pass list
 other_set = {1,2,6}
 
+# accesing a set - can't, just can see if value in set 
+my_set = {1,2,3,4,5}
+print(1 in my_set) # to know if the value is in the set 
+
+
 # METHODS
 countries = {"Israel", "US", "Brazil"}
 names = {"Shimon", "Israel", "David"}
 
-# adding one element to a set 
+# add() - adding one element to a set 
 names2 = {"Camila", "Niv", "Gisela"}
 names2.add("Ariel")
 print(names2)
@@ -59,13 +64,56 @@ numbers_to_add = {15,25}
 my_fav_numbers.update(numbers_to_add)
 
 
+# difference() 
+# Returns a set containing the difference between two or more sets
 
-# Intersection - Adds the SHARED values of two sets in a new set 
-set_3 = countries.intersection(names)
-print(set_3)
+my_set = {1,2,3,4,5}
+your_set = {4,5,6,7,8,9,10}
 
-# Union - Merging UNIQUE values of two different sets in a new set 
-# Good way to make sure that when you merge two sets you are not repeating values
-merged_set = countries.union(names)
-print(merged_set)
+print(my_set.difference(your_set)) 
+
+# difference_update()
+# Removes all elements of another set from the first set you define
+
+my_set.difference_update(your_set)
+print(my_set)
+
+# discard()
+# Removes the specified item
+print(my_set.discard(5))
+
+# intersection()
+# Returns a new set with elements common to the set and all others
+print(my_set.intersection(your_set)) 
+print(my_set & your_set) # same as doing intersection()
+
+# isdisjoint()
+# Returns True if two sets has a null intersection, do these sets have nothing in common?
+print(my_set.isdisjoint())
+
+# issubset()
+# Tells you whether another set contains this set 
+my_numbers = {4,5}
+your_numbers = {4,5,6,7,8,9,10}
+print(my_numbers.issubset(your_numbers))
+
+# issuperset()
+# Tells you whether this set contains the other set 
+# The other way around of issubset()
+print(my_numbers.issuperset(your_numbers))
+
+# union()
+# Returns a new set with elements from the set and all others
+# good to make sure when you join two sets/lists you don't have duplicates
+print(my_set.union(your_set))
+print(my_set | your_set) - # same as using union 
+
+# Exercise - check who didn't come to class 
+school = {'Bobby','Tammy','Jammy','Sally','Danny'}
+attendance_list = ['Jammy', 'Bobby', 'Danny', 'Sally']
+
+non_attendance = school.difference(set(attendance_list))
+print(non_attendance)
+
+
 

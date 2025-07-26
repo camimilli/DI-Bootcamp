@@ -5,11 +5,11 @@ print("Hello World \n" * 4)
 print((99**3)*8)
 
 # Exercise 3 - What Is The Output?
-False
-True
-False
-False
-False
+print(False)
+print(True)
+print(False)
+print(False)
+print(False)
 
 # Exercise 4 - Your Computer Brand
 computer_brand = "Mac"
@@ -19,8 +19,8 @@ print(f"I have a {computer_brand} computer")
 name = "Camila"
 age = 30
 shoe_size = 37
-info = f"{name} is a {age} year old woman which an average feet size of {shoe_size}"
-print(info)
+user_info = f"{name} is a {age} year old woman, with an average feet size of {shoe_size}"
+print(user_info)
 
 # Exercise 6 - A & B
 a = 10 
