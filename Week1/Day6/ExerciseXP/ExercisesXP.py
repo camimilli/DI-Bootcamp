@@ -1,85 +1,88 @@
 # Exercise 1: Converting Lists Into Dictionaries
 
-keys = ['Ten', 'Twenty', 'Thirty']
-values = [10, 20, 30]
+# keys = ['Ten', 'Twenty', 'Thirty']
+# values = [10, 20, 30]
 
-new_dictionary = dict(zip(keys,values))
-print(new_dictionary)
+# new_dictionary = dict(zip(keys,values))
+# print(new_dictionary)
 
 
 # Exercise 2: Cinemax #2
 
-family = {}
-total_cost = 0
+# family = {}
+# total_cost = 0
 
-# Get input from user 
-while True:
-    name_input = input("Enter your name (type 'q' to quit):\n")
-    if name_input == 'q':
-        break
-    else:
-        age_input = input("Enter your age:\n")
-        age_input = int(age_input)
-        family.update({name_input: age_input})
+# # Get input from user 
+# while True:
+#     name_input = input("Enter your name (type 'q' to quit):\n")
+#     if name_input == 'q':
+#         break
+#     else:
+#         age_input = input("Enter your age:\n")
+#         age_input = int(age_input)
+#         family.update({name_input: age_input})
 
-# Calculate ticket per person and total 
-for name, age in family.items():
-     if age < 3:
-         total_cost += 0 
-         print(f"Ticket cost for {name}: $0")
-     elif 3 < age <= 12:
-         total_cost += 10
-         print(f"Ticket cost for {name}: $10")
-     else:
-         total_cost += 15
-         print(f"Ticket cost for {name}: $15")
+# # Calculate ticket per person and total 
+# for name, age in family.items():
+#      if age < 3:
+#          total_cost += 0 
+#          print(f"Ticket cost for {name}: $0")
+#      elif age in range(3,13):
+#          total_cost += 10
+#          print(f"Ticket cost for {name}: $10")
+#      else:
+#          total_cost += 15
+#          print(f"Ticket cost for {name}: $15")
 
-print(f"Tickets Total Cost: ${total_cost}")
+# print(f"Tickets Total Cost: ${total_cost}")
 
 
-# Exercise 3: Zara
+# # Exercise 3: Zara
 
-brand = {'name': 'Zara',
-        'creation_date': 1975,
-        'creator_name': 'Amancio Ortega Gaona',
-        'type_of_clothes': ['men', 'women', 'children', 'home'],
-        'international_competitors': ['Gap', 'H&M', 'Benetton'],
-        'number_stores': 7000,
-        'major_color': {
-            'France': 'blue',
-            'Spain': 'red',
-            'US': ['pink', 'green']
-            }
-        }
+# brand = {'name': 'Zara',
+#         'creation_date': 1975,
+#         'creator_name': 'Amancio Ortega Gaona',
+#         'type_of_clothes': ['men', 'women', 'children', 'home'],
+#         'international_competitors': ['Gap', 'H&M', 'Benetton'],
+#         'number_stores': 7000,
+#         'major_color': {
+#             'France': 'blue',
+#             'Spain': 'red',
+#             'US': ['pink', 'green']
+#             }
+#         }
 
-brand['number_stores'] = 2
-print(f"Zara is known from selling clothes for {brand['type_of_clothes'][0]}, {brand['type_of_clothes'][1]}, {brand['type_of_clothes'][2]} and lately they added a {brand['type_of_clothes'][3]} items' store.")
-brand.update({'country_creation': 'Spain'})
+# brand['number_stores'] = 2
 
-if brand.get('international_competitors'):
-    brand['international_competitors'].append('Desigual')
+# print('In Zara you can buy items for: ')
+# for item in brand['type_of_clothes']:
+#     print(f'- {item}')
 
-del brand['creation_date']
 
-print(brand['international_competitors'][-1])
+# brand.update({'country_creation': 'Spain'})
 
-print(brand['major_color']['US'])
+# if brand.get('international_competitors'):
+#     brand['international_competitors'].append('Desigual')
 
-brand_list = list(brand)
-print(len(brand_list))
+# del brand['creation_date']
 
-for keys in brand.keys():
-    print(keys)
+# print(brand['international_competitors'][-1])
 
-# Bonus
-more_on_zara = {
-                'creation_date': 1975
-}
+# print(brand['major_color']['US'])
 
-for key,value in more_on_zara.items():
-    brand.update({key:value})
+# brand_list = list(brand)
+# print(len(brand_list))
 
-print(brand)
+# for keys in brand.keys():
+#     print(keys)
+
+# # Bonus
+# more_on_zara = {
+#                 'creation_date': 1975
+# }
+
+# brand.update(more_on_zara)
+# print(brand)
 
 
 # Exercise 4: Disney Characters
