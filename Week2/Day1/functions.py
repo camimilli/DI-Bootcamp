@@ -1,6 +1,6 @@
-# FUNCTIONS 
-# A function is a reusable block of code that runs when you "call" it
-# include documentation ''' documentation ''' this shows when you hover on the function in the code
+# FUNCTIONS = A block of reusable block code 
+#             place () after the function name to invoke it
+#             include documentation ''' documentation ''' this shows when you hover on the function in the code
 
 # SYNTAX
 
@@ -19,6 +19,7 @@ def hello_there():
 
 hello_there()
 
+print()
 
 # Passing ARGUMENTS to the function
 # the order of the arguments when calling the function matter 
