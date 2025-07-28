@@ -8,7 +8,7 @@ for index, char in enumerate(word):
     if char in letters:
         letters[char].append(index)
     else:
-        letters.update({char:[index]})
+        letters[char] = [index]
 
 print(letters)
 
@@ -17,8 +17,9 @@ print(letters)
 
 items_purchase = {"Water": "$1", "Bread": "$3", "TV": "$1,000", "Fertilizer": "$20"}
 wallet = "$300"
+affordable_items = []
 
-# takes '$X' returns X 
+# Converts a dollar string (e.g., '$10') to an integer (10).
 def dollar_to_int(price):
     if ',' in price:
         price = price.replace(',','')
@@ -32,7 +33,6 @@ for key,value in items_purchase.items():
     items_purchase[key] = dollar_to_int(value)
 
 # Calculate and return affordable items  
-affordable_items = []
 
 for item in items_purchase.keys():
     if items_purchase[item] < wallet:

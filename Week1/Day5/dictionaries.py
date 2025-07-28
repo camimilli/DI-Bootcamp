@@ -110,6 +110,8 @@ for key,value in student_info.items():
 # better to use update than assignment form as it's more clear in code
 # can pass dictionary as arg 
 student_info.update({'patronus': 'stag'})
+# inside of a loop, better to do dictionary[key] = [value]
+student_info['last_name'] = 'Potter Potter'
 
 # get() - returns the value of the specified key, if key doesn't exit return none 
 print(student_info.get('pets')) # returns pets
