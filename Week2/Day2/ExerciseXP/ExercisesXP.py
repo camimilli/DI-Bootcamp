@@ -129,7 +129,7 @@ def get_random_temp()->int:
 
         except ValueError:
             # Errors when int() conversion fails (user types text)
-            print('You entered an invalid number.')
+            print('You didn\'t enter a number.')
             continue
     
     season = ''
@@ -142,10 +142,10 @@ def get_random_temp()->int:
         season = 'autumn'
         random_temp = random.randint(15,28)
     elif month_input == 12 or month_input in range(1,3):
-        season == 'winter'
+        season = 'winter'
         random_temp = random.randint(5,18)
     elif month_input in range(3,6):
-        season == 'spring'
+        season = 'spring'
         random_temp = random.randint(15,30)
     
     return random_temp
