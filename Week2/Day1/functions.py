@@ -2,6 +2,17 @@
 #             place () after the function name to invoke it
 #             include documentation ''' documentation ''' this shows when you hover on the function in the code
 
+########################################
+
+# METHODS VS FUNCTIONS
+
+# FUNCTION - Standalone block of code designed to perform a specific task, can be called independently and typically operatores
+# on data passed to it as arguments. 
+
+# METHOD - Function associated with an object/class 
+
+########################################
+
 # SYNTAX
 
 def func_name():
@@ -21,6 +32,19 @@ hello_there()
 
 print()
 
+########################################
+# KNOW WHAT A FUNCTION DOES help() and __doc__
+
+# help(function_name)
+# running will show doc for function on console
+help(len)
+
+# print(function_name.__doc__)
+# prints the doc on console 
+print(len.__doc__)
+
+########################################
+
 # Passing ARGUMENTS to the function
 # the order of the arguments when calling the function matter 
 # unless you use key word arguments
@@ -38,6 +62,7 @@ def greetings(language,name):
 
 greetings('PT','Camila')
 
+########################################
 
 # Key word arguments
 
@@ -54,6 +79,7 @@ def greetings(language,name):
 
 greetings(name = 'Camila', language = 'PT')
 
+########################################
 
 # Default value arguments
 # if you want to give default value for 1 arg only, you need to move that arg to the end of the list of args
@@ -73,6 +99,8 @@ def greetings(language = 'EN', name= 'user')->str: #default values
         return "Unknown language"
 
 greetings()
+
+########################################
 
 # Returning a value
 
@@ -131,6 +159,8 @@ print(country_info('Argentina')) # returns tuple
 ar_capital, ar_pop = country_info('Argentina') # unpacking tuple into variables
 print(ar_capital)
 print(ar_pop)
+
+########################################
 
 # Global and Local Scopes
 # Variables from global scopes can be accesed in any place of our file, like local scope but NOT modified 
