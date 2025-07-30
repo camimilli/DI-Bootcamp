@@ -39,7 +39,7 @@ def process_columns(two_dim_list)->str:
 
 sentence_with_chars = process_columns(matrix)  
 
-# STEP 3 - CLEANING STRING (ALPHA CHARACTERS / REPLACE SYMBOLS WITH SPACES)
+# STEP 3 and 4 - CLEANING STRING (ALPHA CHARACTERS / REPLACE SYMBOLS WITH SPACES)
 
 def clean_string(text)->str:
     text_to_clean = text
@@ -55,5 +55,6 @@ def clean_string(text)->str:
     
     return cleaned_text.strip()
 
+# STEP 5 - PRINT DECODED MESSAGE
 decoded_message = clean_string(sentence_with_chars)
 print(decoded_message)
