@@ -15,8 +15,6 @@ def string_to_2d(text,n)->list:
         matrix_list.append([letter for letter in new_element])
     return matrix_list
 
-matrix = string_to_2d(MATRIX_STR, 3)
-
 # STEP 2 - PROCESSING COLUMNS 
 
 def process_columns(two_dim_list)->str:
@@ -37,7 +35,7 @@ def process_columns(two_dim_list)->str:
 
     return result
 
-sentence_with_chars = process_columns(matrix)  
+
 
 # STEP 3 and 4 - CLEANING STRING (ALPHA CHARACTERS / REPLACE SYMBOLS WITH SPACES)
 
@@ -56,5 +54,16 @@ def clean_string(text)->str:
     return cleaned_text.strip()
 
 # STEP 5 - PRINT DECODED MESSAGE
-decoded_message = clean_string(sentence_with_chars)
-print(decoded_message)
+
+def main(text)->str:
+    '''
+    takes encripted message and returns decoded message 
+    '''
+    encrypted_message = text 
+    matrix = string_to_2d(encrypted_message, 3)
+    sentence_with_chars = process_columns(matrix)  
+    decoded_message = clean_string(sentence_with_chars)
+    return decoded_message
+
+print(main(MATRIX_STR))
+
