@@ -1,0 +1,12 @@
+URL: https://github.com/camimilli/DI-Bootcamp/blob/main/Week2/Day4/DailyChallenge.py
+suggestions for improvement:
+- In `sort()`, the prompt could be improved to explicitly state that words should not contain spaces, and perhaps to add an example.
+- The `longest_word` function doesn't handle punctuation within words as accurately as desired.  For example,  "Margaret's" is correctly identified, but  "forever."  is treated as two words by the `split()` method.  It should treat punctuation as part of the word.
+- Add docstrings to better explain the purpose of each function's parameters and return values.
+- Consider adding input validation to handle edge cases in both functions (e.g., empty input strings).
+Brief justification:
+- correctness: The `sort()` function correctly addresses Challenge 1 by taking comma-separated input, splitting it, sorting it, and rejoining it. The `longest_word()` function largely addresses Challenge 2, finding the longest word; however, its handling of punctuation within words needs improvement.  It is close enough to deserve a high score but the punctuation handling, as noted, is imperfect, preventing a perfect score. This directly relates to the chapter's content on strings, lists, sorting, and functions.
+- readability: The code is generally readable.  However, the prompts for user input could be more precise, and the docstrings could be improved for clarity.  This directly relates to the chapter's objective of teaching clear coding practices.
+- performance: The performance of both functions is efficient for typical inputs. The use of built-in functions like `split()`, `sort()`, and `max()` keeps things reasonably fast. The time complexity is acceptable for most practical applications. This relates to the chapter's implicit goal of teaching efficient coding practices.
+- security: The code does not present any security vulnerabilities. There is no interaction with external resources or handling of user input in a way that could create a risk. This is a simple script with no security concerns. This aspect aligns with good coding practices taught in introductory programming courses.
+
