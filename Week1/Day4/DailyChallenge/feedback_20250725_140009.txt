@@ -1,0 +1,11 @@
+URL: https://github.com/camimilli/DI-Bootcamp/blob/main/Week1/Day4/DailyChallenge/DailyChallenge.py
+suggestions for improvement:
+- Challenge 1: The use of a separate `multiply_for` variable is slightly less efficient than directly calculating the multiple within the loop (e.g., `multiples.append(number_input * (num + 1))`).
+- Challenge 1: Add input validation to handle non-integer inputs or negative length inputs.
+- Challenge 2: The code correctly removes consecutive duplicates.  Consider adding a more descriptive variable name than `new_string`, perhaps `unique_string`.
+Brief justification:
+- correctness: Both challenges are correctly solved. Challenge 1 generates a list of multiples as specified, using a `for` loop, lists, and arithmetic. Challenge 2 correctly removes consecutive duplicate letters from a string using a `for` loop, strings, and conditional statements (`if`).  This directly addresses all aspects of the problem descriptions and aligns perfectly with the stated Python topics.
+- readability: The code is generally readable. Variable names are mostly descriptive (though could be improved as noted in feedback). The logic is easy to follow in both challenges.  The minor inefficiency in Challenge 1 slightly detracts from perfect readability.
+- performance: The performance of the code is acceptable for small inputs. However, for very large inputs, the solution to Challenge 1 could be slightly optimized (as noted in the feedback).  The algorithm for removing duplicate letters in challenge 2 has a time complexity that is linear to the input length, which is acceptable but not necessarily the most optimal for larger strings.  It would be very efficient to use a more advanced algorithm but this would be a level beyond the challenges.
+- security: The code is secure in that it doesn't introduce any vulnerabilities.  The only interaction is with user input which is handled appropriately.  No external files or resources are accessed.
+

@@ -1,0 +1,12 @@
+URL: https://github.com/camimilli/DI-Bootcamp/blob/main/Week1/Day6/DailyChallenge/DailyChallenge.py
+suggestions for improvement:
+- In Challenge 1, using `letters.update({char: [index]}) ` is less efficient than `letters[char] = [index]` when creating a new key. The update method is less direct for this specific case.
+- In Challenge 2, the `dollar_to_int` function could handle potential errors more gracefully (e.g., if the input isn't a valid dollar amount).  Adding a `try-except` block would improve robustness.
+- For improved readability in Challenge 2, consider separating the data cleaning, affordability check, and sorting steps into distinct functions.
+- The comments in Challenge 2 could be more descriptive. For example, instead of `# takes '$X' returns X`, use something like `# Converts a dollar string (e.g., '$10') to an integer (10).`
+Brief justification:
+- correctness: Both challenges correctly implement the specified functionalities. Challenge 1 accurately creates a dictionary mapping characters to their indices, handling cases with duplicate characters. Challenge 2 correctly cleans the input data, determines affordable items based on the wallet amount, and returns the alphabetically sorted list or 'Nothing' as appropriate.  The code directly addresses all aspects outlined in the Chapter Content/Questions, using dictionaries, loops, conditionals and string manipulations.
+- readability: The code is generally readable. However, some improvements could enhance clarity, particularly in Challenge 2, where breaking down the process into smaller, well-named functions would improve modularity.  The comments are helpful but could be more precise in places.
+- performance: The performance is acceptable for small inputs. However, in Challenge 2, converting the string representation of the wallet and prices to integers repeatedly within the loop is inefficient.  It's best to process those conversions only once before looping. The `dollar_to_int` function could also be optimized to handle comma removal more elegantly.
+- security: The code doesn't have any apparent security vulnerabilities.  It's mainly concerned with string and numerical processing, which inherently have limited security risks in this context.
+
