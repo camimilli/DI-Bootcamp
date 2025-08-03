@@ -1,0 +1,26 @@
+URL: URL: https://github.com/camimilli/DI-Bootcamp/blob/main/Week2/Day6/ExercisesXP/Exercise_1_Cats.py
+suggestions for improvement:
+- The `oldest` function could be made more concise and Pythonic using the `max` function with a custom key.
+- Add docstrings to the `Cat` class and the `oldest` function to improve readability and explain their purpose.
+Correctness: 100%
+-----
+URL: URL: https://github.com/camimilli/DI-Bootcamp/blob/main/Week2/Day6/ExercisesXP/Exercise_2_Dogs.py
+suggestions for improvement:
+- The `compare_size` function could be made slightly more concise by using an absolute difference calculation to avoid the `if/elif/else` structure.  For example: `height_difference = abs(dog_1.height - dog_2.height)`
+- Add docstrings to the `Dog` class and the `compare_size` function to improve readability and explain their purpose and parameters.
+Correctness: 100%
+-----
+URL: URL: https://github.com/camimilli/DI-Bootcamp/blob/main/Week2/Day6/ExercisesXP/Exercise_3_Song_Producer.py
+suggestions for improvement:
+- The code is already quite concise and readable.  Minor improvements could be made by adding docstrings to the class and method to further enhance understanding.
+- Consider adding error handling (e.g., checking if `lyrics` is a list before iterating). This makes the code more robust.
+Correctness: 100%
+-----
+URL: URL: https://github.com/camimilli/DI-Bootcamp/blob/main/Week2/Day6/ExercisesXP/Exercise_4_At_The_Zoo.py
+suggestions for improvement:
+- The `sort_animals` method has redundant code.  The `first_letter` list is created twice.  This should be simplified.
+- The `sort_animals` method could use the `sorted()` function with a `key` to simplify the sorting and grouping logic, making it more efficient and readable.
+- Add docstrings to methods for better readability and understanding.
+- Consider adding error handling (e.g., `try-except` blocks) in case of unexpected input to make the code more robust.
+Correctness: 95%
+-----
