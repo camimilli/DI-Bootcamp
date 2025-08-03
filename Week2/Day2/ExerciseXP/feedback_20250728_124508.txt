@@ -1,0 +1,11 @@
+URL: https://github.com/camimilli/DI-Bootcamp/blob/main/Week2/Day2/ExerciseXP/ExercisesXP.py
+suggestions for improvement:
+- In `get_random_temp()` (bonus section), there's a logic error. The `season` variable isn't consistently assigned within the `if/elif` block;  'winter' and 'spring' are incorrectly assigned using `==` instead of `=`.
+- Add docstrings to the bonus `get_random_temp()` function to clearly explain its parameters, return value, and purpose.
+- Improve the error handling in the bonus `get_random_temp()` function.  Consider using a more informative error message if the input is not an integer.
+Brief justification:
+- correctness: The code correctly implements most exercises as specified in the chapter content.  Exercise 7's bonus section has a minor logical flaw, resulting in incorrect season assignment in certain cases, impacting the correctness score.  All other exercises fulfill their stated requirements.
+- readability: The code is generally readable with clear function names and docstrings for the main functions.  The bonus section's code could benefit from more concise structuring and comments to improve its readability.
+- performance: The code's performance is efficient for the tasks involved.  No unnecessary computations or inefficient algorithms are used.
+- security: The code doesn't have any obvious security vulnerabilities. It doesn't interact with external resources or handle user inputs in a way that would introduce security risks.
+
