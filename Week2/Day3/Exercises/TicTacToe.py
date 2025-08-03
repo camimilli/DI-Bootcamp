@@ -6,6 +6,7 @@ def initialize_board():
     board = [([' ']*3) for num in range(3)]
     return board 
 
+
 # Step 2: Displaying the Game Board
 
 def display_board(board)->str:
@@ -24,12 +25,12 @@ def display_board(board)->str:
 
 # Step 3: Getting Player Input
 
-def player_input(board, player)->int:
+def player_input(board, current_player)->int:
     '''
     Ask current player for their move 
     returns position 1-9 depending on empty tiles available on board 
     '''
-    player_number = player
+    player_number = current_player
 
     position_map = {
     1:(0,0), 2:(0,1), 3:(0,2),
@@ -45,7 +46,7 @@ def player_input(board, player)->int:
             if position in range(1,10):
                 row, column = position_map[position]
                 if board[row][column] == ' ':
-                    if player == 1:
+                    if player_number == 1:
                         board[row][column] = 'X'
                         break 
                     else:
@@ -102,6 +103,9 @@ def check_win(board, player)->bool:
     
     # No win
     return False 
+
+
+# Step 5: Check for Tie
 
 def check_tie(board):
     for row in board:

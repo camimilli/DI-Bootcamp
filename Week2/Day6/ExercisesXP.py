@@ -5,21 +5,21 @@ class Cat:
         self.name = cat_name 
         self.age = cat_age 
 
-    def oldest(self, cat1, cat2):
-        oldest = ''
-        if self.age > cat1.age and self.age > cat2.age:
-            oldest = self
-        elif cat1.age > self.age and cat1.age > cat2.age:
-            oldest = cat1
-        else:
-            oldest = cat2
-        print(f'The oldest cat is {oldest.name} and is {oldest.age} years old')        
+def oldest(cat1, cat2, cat3):
+    oldest = ''
+    if cat1.age > cat2.age and cat1.age > cat3.age:
+        oldest = cat1
+    elif cat2.age > cat1.age and cat2.age > cat3.age:
+        oldest = cat2
+    else:
+        oldest = cat3
+    print(f'The oldest cat is {oldest.name} and is {oldest.age} years old')        
 
 
 cat_one = Cat('Silki', 3)
 cat_two = Cat('Napoleon', 10)
 cat_three = Cat('Sparrow', 6)
-Cat.oldest(cat_one, cat_two, cat_three)
+oldest(cat_one, cat_two, cat_three)
 
 
 # Exercise 2: Dogs
