@@ -20,6 +20,3 @@ cat_one = Cat('Silki', 3)
 cat_two = Cat('Napoleon', 10)
 cat_three = Cat('Sparrow', 6)
 oldest(cat_one, cat_two, cat_three)
-
-
-# Exercise 2: Dogs
