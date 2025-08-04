@@ -1,0 +1,12 @@
+URL: https://github.com/camimilli/DI-Bootcamp/blob/main/Week2/Day2/DailyChallenge/DailyChallenge.py
+suggestions for improvement:
+- The `string_to_2d` function assumes a fixed column width (3 in this case).  It should handle variable-length rows more robustly. Consider using the length of the longest row to determine the number of columns.
+- The column processing in `process_columns` is inefficient.  It iterates through all rows and columns, even though it only needs to access specific column elements. A more efficient approach would be to directly access elements using column indices.
+- The `clean_string` function's logic for replacing symbols with spaces could be simplified. The condition `(char.isalpha() == False) and (text_to_clean[index-1].isalpha() == False)` is somewhat complex. A simpler approach using a flag to track the previous character's alpha status could improve readability.
+- The docstrings in your functions are good.  Add a more comprehensive docstring to the main script itself explaining what the script does.
+Brief justification:
+- correctness: The code largely follows the steps outlined in the chapter. It transforms the string into a 2D list, processes columns, filters alpha characters, and replaces symbols with spaces. However, it has flaws in its handling of variable-length rows and inefficient column processing, which reduces the correctness score. The core functionality aligns with the chapter, but the implementation is not optimal.
+- readability: The code is generally well-structured and uses descriptive variable names. However, some parts, such as the symbol replacement logic in `clean_string`, can be improved for clarity. Docstrings should also be added to the main function and more detailed information should be added to the `string_to_2d` function docstring. Overall, the code is readable but can be improved with simplification and more comprehensive docstrings.
+- performance: The `process_columns` function is not efficient due to unnecessary iterations. The algorithm's time complexity can be improved.  The rest of the code has good performance for the given input size. The improvements suggested will further enhance its performance.
+- security: No security vulnerabilities are present in the provided code. It only processes input data and doesn't interact with external resources or handle user input in a way that could introduce security risks.
+
