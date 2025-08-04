@@ -24,9 +24,6 @@ class Zoo:
         return self 
     
     def sort_animals(self):
-        first_letter = set(animal[0] for animal in self.animals)
-        first_letter = list(first_letter)
-        first_letter.sort()
 
         first_letter = set(animal[0] for animal in self.animals)
         first_letter = list(first_letter)

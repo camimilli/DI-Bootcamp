@@ -136,7 +136,19 @@ print(student_info)
 student_info.clear()
 print(student_info)
 
+# sorted(name_of_dict) 
+# when you use sorted on a dictionary it automatically iterates over the keys of 
+# a dictionary, so no need to use list comprehension 
 
+animals = {
+    'goat': 2,
+    'cow': 5,
+    'elephant': 1
+}
+
+
+sorted_animals = sorted(animals)
+print(sorted_animals) # ['goat', 'cow', 'elephant']
 
 # DICTIONARY COMPREHENSION = create dictionaries using an expression
 #                            can replace for loops and certain lambda functions
