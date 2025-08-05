@@ -1,0 +1,23 @@
+URL: URL: https://github.com/camimilli/DI-Bootcamp/blob/main/Week3/Day2/ExercisesXP/Exercise1.py
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/camimilli/DI-Bootcamp/blob/main/Week3/Day2/ExercisesXP/Exercise2.py
+suggestions for improvement:
+- Add docstrings to the `__init__` method explaining the purpose of each parameter.
+- Consider adding input validation to the `__init__` method to ensure that age and weight are positive numbers.  This would improve the robustness of the class.
+Correctness: 100%
+-----
+URL: URL: https://github.com/camimilli/DI-Bootcamp/blob/main/Week3/Day2/ExercisesXP/Exercise3.py
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/camimilli/DI-Bootcamp/blob/main/Week3/Day2/ExercisesXP/Exercise4.py
+suggestions for improvement:
+- Add docstrings to the `Family` class methods for better readability and understanding.
+- Consider adding error handling (e.g., `try-except` blocks) to handle potential exceptions, such as invalid input types for age.
+- The `check_majority` method could be improved by returning a boolean value instead of printing the message. This would allow for more flexibility in how the result is handled by the calling code.
+Correctness: 100%
+-----
