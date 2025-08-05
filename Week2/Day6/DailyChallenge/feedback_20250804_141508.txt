@@ -1,0 +1,11 @@
+URL: https://github.com/camimilli/DI-Bootcamp/blob/main/Week2/Day6/DailyChallenge/DailyChallenge.py
+suggestions for improvement:
+- The `add_animals` method's return type annotation `-> dict` is incorrect. It should be `-> None` or `-> self` since it modifies the object's state and doesn't return a dictionary.
+- Improve the formatting of the `get_info` method's output to align the animal names and counts into neat columns as shown in the example.  Consider using f-strings and string formatting techniques (like `str.rjust()` or similar) to achieve better alignment.
+- The variable name `mcdonals_farm` has a typo; it should be `macdonald` to match the example.
+Brief justification:
+- correctness: The code correctly implements the `Farm` class with `__init__`, `add_animal` (although renamed to `add_animals`), `get_info`, `get_animal_types`, and `get_short_info` methods.  It fulfills the core requirements of the chapter content, including class creation, dictionary usage, string formatting, method implementation, and list manipulation.  The minor formatting difference in `get_info` and the typo are the reasons for the slight deduction in the score. The functionality directly addresses the specified tasks within the chapter content.
+- readability: The code is generally readable, with clear method names and docstrings.  However, the `add_animals` method's return type annotation is misleading, and the inconsistent naming (`mcdonals_farm` vs the example's `macdonald`) slightly detracts from readability.  Improved formatting in `get_info` would further enhance readability.
+- performance: The code's performance is efficient. The algorithms used are straightforward and have a time complexity suitable for the task.
+- security: The code does not present any obvious security vulnerabilities.
+
