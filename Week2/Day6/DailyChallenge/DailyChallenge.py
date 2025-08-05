@@ -6,7 +6,7 @@ class Farm:
         self.name = farm_name
         self.animals = {}
 
-    def add_animals(self, animal_type, count=1)->dict:
+    def add_animals(self, animal_type, count=1)->dict: # args
         '''
         Adds animals to the farm 
         '''
@@ -50,7 +50,9 @@ class Farm:
        
 
 mcdonals_farm = Farm('McDonals')
-mcdonals_farm.add_animals('cow', 5)
+mcdonals_farm.add_animals('cow', 5) 
+# add *args and update call method ('cow', 'sheep', 'goat'...) 
+# check how to pass numbers
 mcdonals_farm.add_animals('sheep')
 mcdonals_farm.add_animals('sheep')
 mcdonals_farm.add_animals('goat', 12)
