@@ -10,7 +10,11 @@ class Pets():
         and activates the method walk from the animal class 
         '''
         for animal in self.animals:
-            print(animal.walk())
+            try:
+                print(animal.walk())
+            except AttributeError:
+                print(f"I can't walk a {type(animal).__name__} object because it doesn't have a 'walk' method")
+   
 
 class Cat():
     is_lazy = True
@@ -47,10 +51,10 @@ class Siamese(Cat):
         return f'{self.name} is doing the {move} with elegance'
 
 
-all_cats = [Bengal("Bengal", 2), Chartreux("Chartru", 5), Siamese("Cinco", 7)]
+all_cats = [Bengal("Bengal", 2), '123', 2] #[Bengal("Bengal", 2), Chartreux("Chartru", 5), Siamese("Cinco", 7)]
 sara_pets = Pets(all_cats)
 sara_pets.walk()
-print(all_cats[2].dance('boogie'))
+# print(all_cats[2].dance('boogie'))
 
 
 # Exercise 2: Dogs
@@ -75,18 +79,18 @@ class Dog:
         '''
         return self.weight / self.age * 10
     
-    def fight(self, other_dog)->str:
+    def fight(self, opponent:object)->str:
         '''
         compares the object's weight*run_speed() 
-        with the argument passed (other_dog)
+        with the argument passed (opponent)
         and returns a string based on who won / if it's a tie
         '''
-        if (self.weight * self.run_speed()) > (other_dog.weight * other_dog.run_speed()):
-            return f'{self.name} won the fight against {other_dog.name}'
-        elif (self.weight * self.run_speed()) == (other_dog.weight * other_dog.run_speed()):
+        if (self.weight * self.run_speed()) > (opponent.weight * opponent.run_speed()):
+            return f'{self.name} won the fight against {opponent.name}'
+        elif (self.weight * self.run_speed()) == (opponent.weight * opponent.run_speed()):
             return f'IT\'S A TIE!'
         else:
-            return f'{other_dog.name} won the fight against {self.name}'
+            return f'{opponent.name} won the fight against {self.name}'
 
 
 dog1 = Dog('Mushu', 5, 19)
@@ -186,6 +190,7 @@ class Family:
         if yes -> checks if over or under 18 and checks if they can go out with friends
         if not -> returns that person is not part of members list 
         '''
+        
         for member in self.members:
             if member.first_name == first_name:
                 if member.is_18():

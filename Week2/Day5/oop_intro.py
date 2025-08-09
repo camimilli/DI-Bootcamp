@@ -118,3 +118,10 @@ first_person = Person("John", 36)
 first_person.show_details()
 first_person.change_name("Juan")
 first_person.show_details()
+
+# DIR() - OBJECT INTROSPECTION
+# gives all the methods and attributes of an object
+# useful when you try to figure out what you have access to when working with an object
+
+print(dir(first_person))
+
