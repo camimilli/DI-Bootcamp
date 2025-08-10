@@ -1,7 +1,7 @@
 # CLASS DECORATORS - 
 # built-in decorators:
 #   @classmethod, @staticmethod, @property
-# decorators are function that change the default function behavior 
+# decorators are functions/classes that change the default function behavior 
 # you can build your own decorators (advanced)
 
 ########################################

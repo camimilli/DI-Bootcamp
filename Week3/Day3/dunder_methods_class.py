@@ -27,7 +27,8 @@ class Person:
         self.birth_date = birth_date
         self.age = age 
         Person.id_number += 1 # this increments the id_number every time a person is created 
-        # access class attribute -> Class.attribute 
+        # acces
+        # s class attribute -> Class.attribute 
 
     def __str__(self):
         return f'name: {self.name} \nlast name: {self.last_name}\nbirth date: {self.birth_date}' 
