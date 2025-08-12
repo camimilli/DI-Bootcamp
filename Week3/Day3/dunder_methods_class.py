@@ -59,3 +59,5 @@ print(p1) # this is how __str__ is used, instead of printing the object memory i
 print(repr(p1)) # this is how I get the info from __repr__ in case there's also a method __str__ in the code
 print(p1 > p2) # used __lt__ method for < comparison operator
 print(p3 == p3) # used __eq__ method for == comparison operator
+
+

@@ -12,7 +12,10 @@ class Pagination:
         if self.items == None:
             self.items = []
         
-        self.page_size = page_size 
+        if isinstance(page_size, int) and page_size > 0:
+            self.page_size = page_size 
+        else:
+            raise ValueError('Page size must be a positive integer')
         self.current_idx = 0
         self.number_of_pages = math.ceil(len(self.items) / self.page_size)
 
@@ -38,7 +41,7 @@ class Pagination:
             elif isinstance(page_num, str):
                 raise TypeError('you can\'t add a string')
             else:
-                raise ValueError('the page number is not in the range of valid pages')
+                raise IndexError(f'the page number is not in the range of valid pages the range is between 1 and {self.number_of_pages}')
         except Exception as e:
             print(f'{e}')
 
@@ -71,6 +74,10 @@ class Pagination:
         return self 
     
     def previous_page(self):
+        '''
+        Moves one page backwards
+        (if not already on the first)
+        '''
         if self.current_idx != 0:
             self.current_idx -= 1 
         else:
@@ -91,7 +98,7 @@ print(p.get_visible_items())
 p.last_page()
 print(p.get_visible_items())
 
-p.go_to_page(10)
+p.go_to_page(6)
 print(p.current_idx + 1)
 
 p.go_to_page('1')

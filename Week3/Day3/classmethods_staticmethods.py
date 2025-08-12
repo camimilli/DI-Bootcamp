@@ -2,7 +2,10 @@
 # Takes the class as the first argument instead of self
 # USAGE:
 # provide multiple ways to create our objects (alternative constructor)
-
+# SYNTAX: 
+# @classmethod
+#   def function_name(cls, args):
+#        pass 
 
 # @staticmethod 
 # Behave like regular functions (don't need self/cls as args) but still belong to the class 

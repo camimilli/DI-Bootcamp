@@ -63,3 +63,41 @@ print(emp_1 + emp_2)
 
 # __LEN__
 print(len(emp_1))
+
+
+# EXAMPLE 2 
+
+class Toy():
+    def __init__(self, color, age):
+        self.color = color
+        self.age = age
+        self.my_dict = {
+            'name': 'Yoyo',
+            'has_pets': False
+        }
+
+    def __str__(self):
+        # allows you to define how your object is represented as a string 
+        return f'{self.color}'
+
+    def __len__(self):
+        return 5 
+
+    def __del__(self):
+        print('deleted!') 
+
+    # allows to call methods through objects 
+    def __call__(self):
+        return('yess??')
+    
+    def __getitem__(self, i):
+        # enables objects to support indexing or key-based access using square braket notation
+        return self.my_dict[i]
+
+
+action_figure = Toy('red', 0) 
+print(action_figure) # red 
+print(len(action_figure)) # 5 
+# del action_figure # del allows you to delete an object, instance/class attribute and prints what's in __del__ 
+print(action_figure()) # using the __call__ method 
+print(action_figure['name'])
