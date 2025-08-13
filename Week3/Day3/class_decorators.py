@@ -2,7 +2,59 @@
 # built-in decorators:
 #   @classmethod, @staticmethod, @property
 # decorators are functions/classes that change the default function behavior 
-# you can build your own decorators (advanced)
+# you can build your own decorators used for:
+# - Logging, test performance, perform catching, verify permissions...
+
+########################################
+
+# High Order Function HOC:
+# - A function that accepts another function as argument
+# - A function that returns a function 
+# e.g: map(), reduce(), filter()
+
+########################################
+
+# Writing our OWN decorator
+
+# Example 1 
+def my_decorator(func):
+    # what you put in the wrap function enhances the function you pass into my_decorator
+    def wrap_func(*args, **kwargs): # use args and kwargs to make sure we can pass as many args as we can 
+        print('********')           # so if we want to change the functions that use the my_decorator decorator and add 
+        func(*args, **kwargs)       # more arguments, we can 
+        print('********')
+    return wrap_func    
+        
+    
+@my_decorator 
+def hello(greeting, emoji=':('):
+    print(greeting, emoji)
+
+hello('hiii')
+
+########################################
+
+# Why do we need decorators?
+
+from time import time 
+
+# wrapper to calculate performance, how much time it takes the function to run 
+def performance(fn):
+    def wrapper(*args, **kwargs):
+        t1 = time() # starts a time 
+        result = fn(*args, **kwargs) 
+        t2 = time() # start a time 
+        print(f'It took {t2-t1}s') # returns miliseconds
+        return result 
+    return wrapper
+
+
+@performance 
+def long_time():
+    for i in range(1000000000):
+        i*5
+
+long_time()
 
 ########################################
 

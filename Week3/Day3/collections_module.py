@@ -64,10 +64,20 @@ print(grouped_data)
 grouped_data = {k: sum(v) for k, v in grouped_data.items()}
 print(grouped_data)
 
+# example 5
+dictionary3 = defaultdict(lambda: 5, {'a': 1 , 'b' : 2})
+# lambda returns 5, and since we're using it as the first argument for defaultdict we specify that we want to return 5 
+# when the key doesn't exist 
+# you could put anything in lambda like lambda: 'does not exist'
+print(dictionary3['c']) # 5 
+
+
 ##########################################
 
 # Counter
 # SYNTAX - variable = Counter(data)
+# Counter creates a Counter Object which is a dictionary with the count of each element 
+
 c = Counter('gallad') # counts every string 
 print(c) # Counter({'a': 2, 'l': 2, 'g': 1, 'd': 1})
 
@@ -80,6 +90,9 @@ print(c) # Counter({'b': 2, 'a': 1})
 c = Counter(cats=4, dogs=7) 
 print(c) # Counter({'dogs': 7, 'cats': 4})
 print(c['cats']) # 4 
+
+sentence = 'blah blah blah thinking about python'
+print(Counter(sentence))
 
 print('##############\n')
 

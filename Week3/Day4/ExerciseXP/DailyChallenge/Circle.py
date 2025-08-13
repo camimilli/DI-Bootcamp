@@ -4,12 +4,10 @@ from functools import total_ordering
 @total_ordering # implement so I don't need to define __lt__
 class Circle:
 
-    circles = []
-
     def __init__(self, radius):
         self.radius = radius
     # check how to make sure that the user can 
-        Circle.circles.append(self)
+ 
 
     @property 
     def area(self)->int:
@@ -18,6 +16,10 @@ class Circle:
         '''
         return pi * self.radius ** 2
     
+    @property
+    def diameter(self):
+        return self.radius ** 2 
+
     @classmethod
     def from_diameter(cls, diameter):
         '''
@@ -101,7 +103,6 @@ except Exception as e:
 
 # check @classmethod diameter
 circle_with_diameter = Circle.from_diameter(7)
-print(Circle.circles)
 
 # sorted()
 circle_list = [Circle1, Circle2, Circle3, circle_with_diameter]
@@ -109,3 +110,6 @@ ordered_list = sorted(circle_list)
 
 for circle in ordered_list:
     print(circle.radius)
+
+# Accessing diameter 
+print(Circle1.diameter)
