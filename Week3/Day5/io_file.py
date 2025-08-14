@@ -1,4 +1,4 @@
-# PYTHON FILE I/O 
+# PYTHON FILE I/O - Input-Output
 # this module is useful when we work with files/folders it helps us to navigate our OS (operational system)
 # Python file operations: opening a file, reading from it, writing into it, closing it 
 
@@ -132,3 +132,21 @@ for line in txt_list:
 with open(f'{dir_path}/star_wars.txt', 'w', encoding='utf-8') as f:
     f.seek(0) # when we overwrite we need to make sure that seek is at 0 (beginning of file)
     f.writelines(modified_lines) # we overwrite 
+
+
+# Raising exceptions while reading files
+
+try:
+    with open('sad.txt', mode='r') as my_file:
+        print(my_file.read())
+except FileNotFoundError as err:
+    print('file does not exist')
+    raise err 
+except IOError as err: # happens when the machine you're on has issue doing any sort of i/o operation
+    print('IO error')
+    raise err # this is if you want to raise the actual error and not only output the print
+
+
+
+
+

@@ -1,7 +1,9 @@
 # Python writing files (.txt, .json, .csv)
-# w - write (or overwrites a file)
+# w - creates a file that doesn't exist (or overwrites a file)
 # x - writes if the file doesn't already exist 
 # a - append new data on existing file 
+# r - read 
+# r+ - read and write - careful with overwriting as read puts cursor on first line and if you write then you will overwrite the first line
 
 ############################
 
@@ -9,7 +11,7 @@
 
 txt_data = 'I like pizza!'
 
-absolute path 
+# absolute path 
 file_path = 'output.txt'
 
 try:
