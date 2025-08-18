@@ -12,7 +12,8 @@
 
 -- HOW TO INSERT DATA INTO A TABLE
 
--- SYNTAX FOR INSERTING DATE DATA -> dd/mm/yyy
+-- SYNTAX FOR INSERTING DATE DATA -> dd/mm/yyy or mm/dd/yyyy it depends on system
+-- ****BEST WAY TO INSERT DATA**** -> yyyy/mm/dd 
 -- POSTGRESQL STORES DATE DATA -> yyyy/mm/dd (USED TO QUERY DATA)
 -- We can change the format that we see date on tables and how we input 
 
