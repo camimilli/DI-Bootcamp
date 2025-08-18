@@ -1,42 +1,44 @@
-# Exercise 1: Student Grade Summary
+from functools import reduce 
 
-student_grades = {
-    "Alice": [88, 92, 100],
-    "Bob": [75, 78, 80],
-    "Charlie": [92, 90, 85],
-    "Dana": [83, 88, 92],
-    "Eli": [78, 80, 72]
-}
+# # Exercise 1: Student Grade Summary
 
-# calculate average for each student
-student_averages = {key:round(sum(value)/len(value)) for (key,value) in student_grades.items()}
+# student_grades = {
+#     "Alice": [88, 92, 100],
+#     "Bob": [75, 78, 80],
+#     "Charlie": [92, 90, 85],
+#     "Dana": [83, 88, 92],
+#     "Eli": [78, 80, 72]
+# }
 
-def assign_letter_grades(value):
-    if value < 60:
-        return 'F'
-    elif value in range(60,70):
-        return 'D'
-    elif value in range(70,80):
-        return 'C'
-    elif value in range (80,90):
-        return 'B'
-    else:
-        return 'A'
+# # calculate average for each student
+# student_averages = {key:round(sum(value)/len(value)) for (key,value) in student_grades.items()}
 
-# Assign letter grades 
-student_letter_grades = {key: assign_letter_grades(value) for(key,value) in student_averages.items()}
+# def assign_letter_grades(value):
+#     if value < 60:
+#         return 'F'
+#     elif value in range(60,70):
+#         return 'D'
+#     elif value in range(70,80):
+#         return 'C'
+#     elif value in range (80,90):
+#         return 'B'
+#     else:
+#         return 'A'
 
-# Calculate class average
-student_average_list = [value for value in student_averages.values()]
-class_average = round(sum(student_average_list)/len(student_average_list))
+# # Assign letter grades 
+# student_letter_grades = {key: assign_letter_grades(value) for(key,value) in student_averages.items()}
 
-print(class_average)
-print(student_averages)
+# # Calculate class average
+# student_average_list = [value for value in student_averages.values()]
+# class_average = round(sum(student_average_list)/len(student_average_list))
 
-# Print results 
-for key, value in student_letter_grades.items():
-    for key in student_averages.keys():
-        print(f"{key}:\n- Average grade: {student_averages[key]}\n- Letter grade: {value}") 
+# print(class_average)
+# print(student_averages)
+
+# # Print results 
+# for key, value in student_letter_grades.items():
+#     for key in student_averages.keys():
+#         print(f"{key}:\n- Average grade: {student_averages[key]}\n- Letter grade: {value}") 
 
 
 # Exercise 2: Advanced Data Manipulation And Analysis
@@ -62,9 +64,6 @@ for transaction in sales_data:
     else:
         total_sales[product] = cost
 
-# print(total_sales)
-    
-
 # Customer Spending Profile
 customer_spending = {}
 
@@ -83,12 +82,43 @@ for transaction in sales_data:
     transaction.update({'total_price':(transaction['price'] * transaction['quantity'])})
 
 # High-Value Transactions
-greater_500 = [list for list in sales_data if list['total_price'] > 500]
-print(greater_500)
-# missing the total price in descending order DO IT AFTER
+greater_500 = [transaction for transaction in sales_data if transaction['total_price'] > 500]
+greater_sorted = sorted(greater_500, key=lambda transaction:transaction['total_price'], reverse=True)
+
 
 # Customer Loyalty Identification
+
+# Identify any customer who has made more than one purchase, suggesting potential loyalty.
+# Use a dictionary to count purchases per customer, then use a loop or 
+# comprehension to identify customers meeting the loyalty criterion.
+customer_loyalty = {}
+
+for transaction in sales_data:
+    customer_id = f'customer_{transaction['customer_id']}'
+    if customer_id in customer_loyalty:
+        customer_loyalty[customer_id] += 1 
+    else:
+        customer_loyalty[customer_id] = 1
+
+print(customer_loyalty)
 
 
 # Bonus: Insights and Analysis
 
+# Average transaction value for each product category 
+
+
+
+# Most popular product based on quantity sold 
+most_popular_products = {}
+
+for transaction in sales_data:
+    product = transaction['product']
+    quantity = transaction['quantity']
+    if product in most_popular_products:
+        most_popular_products[product] += quantity
+    else:
+        most_popular_products[product] = quantity
+
+most_popular_product = max(most_popular_products, key=most_popular_products.get)
+print(most_popular_product)
