@@ -6,7 +6,7 @@
 -- last_name VARCHAR(150) NOT NULL,
 -- date_of_birth DATE NOT NULL, 
 -- number_oscars SMALLINT NOT NULL
--- )
+-- );
 
 ---------------------------------------------------------------
 
@@ -18,24 +18,24 @@
 -- We can change the format that we see date on tables and how we input 
 
 -- INSERT INTO actors (first_name, last_name, date_of_birth, number_oscars)
--- VALUES ('Matt', 'Damon', '06/05/1961', 2);
+-- VALUES ('Matt', 'Damon', '1961/06/05', 2);
 
 -- INSERT INTO actors (first_name, last_name, date_of_birth, number_oscars)
--- VALUES ('Leonardo', 'DiCaprio', '11/11/1974', 1);
+-- VALUES ('Leonardo', 'DiCaprio', '1974/11/11', 1);
 
 -- INSERT INTO actors (first_name, last_name, date_of_birth, number_oscars)
--- VALUES ('Meryl', 'Streep', '06/22/1949', 3);
+-- VALUES ('Meryl', 'Streep', '1949/06/22', 3);
 
 -- INSERT INTO actors (first_name, last_name, date_of_birth, number_oscars)
--- VALUES ('Tom', 'Hanks', '09/07/1956', 2);
+-- VALUES ('Tom', 'Hanks', '1956/09/07', 2);
 
 -- INSERT INTO actors (first_name, last_name, date_of_birth, number_oscars)
--- VALUES ('Matt', 'O''Leary', '06/07/1987', 3);
+-- VALUES ('Matt', 'O''Leary', '1987/06/07', 3);
 
 -- INSERT INTO actors (first_name, last_name, date_of_birth, number_oscars)
--- VALUES ('Cate', 'Blanchett', '05/14/1969', 2),
--- 	('Daniel Day', 'Lewis', '04/29/1957', 3),
--- 	('Denzel', 'Washington', '12/28/1954', 2);
+-- VALUES ('Cate', 'Blanchett', '1969/05/14', 2),
+-- 	('Daniel Day', 'Lewis', '1957/04/29', 3),
+-- 	('Denzel', 'Washington', '1954/12/28', 2);
 
 ---------------------------------------------------------------
 
@@ -188,3 +188,15 @@
 
 
 -- SELECT * FROM ACTORS
+
+-- INSERT INTO actors (first_name, last_name, date_of_birth, number_oscars) VALUES('George','Clooney','1961/06/05', 1);
+
+-- SELECT AVG(number_oscars) from actors;
+
+-- SELECT DISTINCT number_oscars FROM actors;
+
+-- SELECT * FROM actors
+-- WHERE date_of_birth > '1970/01/01';
+
+SELECT * FROM actors
+WHERE first_name in ('David', 'Meryl', 'Will');
