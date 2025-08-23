@@ -1,6 +1,6 @@
 SELECT * FROM customer;
 
-SELECT (first_name, last_name) AS full_name
+SELECT first_name || ' ' || last_name AS full_name
 FROM customer; 
 
 SELECT DISTINCT create_date
@@ -31,12 +31,12 @@ WHERE title ILIKE 'ta%';
 
 SELECT *
 FROM film
-ORDER BY replacement_cost
+ORDER BY rental_rate
 LIMIT 10;
 
 WITH RankFilms AS (
 	SELECT *,
-		ROW_NUMBER() OVER(ORDER BY replacement_cost ASC) AS low_price_rank
+		ROW_NUMBER() OVER(ORDER BY rental_rate ASC) AS low_price_rank
 	FROM film
 	)
 SELECT *
@@ -49,6 +49,11 @@ FROM customer
 INNER JOIN payment
 ON customer.customer_id = payment.customer_id
 ORDER BY customer.customer_id;
+
+SELECT * 
+FROM film f
+LEFT JOIN inventory i ON f.film_id = i.film_id 
+WHERE i.inventory_id IS NULL;
 
 SELECT city, country
 FROM city 
