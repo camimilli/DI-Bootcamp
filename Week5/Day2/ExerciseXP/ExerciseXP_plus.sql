@@ -59,7 +59,7 @@
 -- ORDER BY birth_date desc
 -- LIMIT 1
 
-SELECT student_id, first_name, last_name, birth_date
-FROM students
-LIMIT 3
-OFFSET 2 
+-- SELECT student_id, first_name, last_name, birth_date
+-- FROM students
+-- LIMIT 3
+-- OFFSET 2 
