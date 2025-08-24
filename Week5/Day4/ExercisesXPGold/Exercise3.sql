@@ -12,11 +12,11 @@ FOREIGN KEY (item_id) REFERENCES items(item_id)
 
 INSERT INTO purchases (quantity_purchased, customer_id, item_id)
 VALUES 
-(1, (SELECT customer_id FROM customers WHERE first_name = 'Scott' AND last_name = 'Scott'), (SELECT item_id from items WHERE product = 'Fan'));
+(1, (SELECT customer_id FROM customers WHERE first_name = 'Scott' AND last_name = 'Scott'), (SELECT item_id from items WHERE product = 'Fan')),
 (10, (SELECT customer_id FROM customers WHERE first_name = 'Melanie' AND last_name = 'Johnson'), (SELECT item_id from items WHERE product = 'Large desk')),
 (2, (SELECT customer_id FROM customers WHERE first_name = 'Greg' AND last_name = 'Jones'), (SELECT item_id from items WHERE product = 'Small Desk'));
 
---- PART II 
+- PART II 
 --- All purchases. Is this information useful to us?
 SELECT * FROM purchases;
 
