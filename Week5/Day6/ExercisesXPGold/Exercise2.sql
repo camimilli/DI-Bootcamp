@@ -37,19 +37,8 @@ WHERE r.return_date IS NULL;
 -- 4 
 -- A list of all customers in the cities where the stores are located.
 
-SELECT c.first_name || ' ' || c.last_name as customer_full_name
-FROM customer c 
-INNER JOIN address a 
-ON c.address_id = a.address_id 
-WHERE a.city_id IN 
-(SELECT ci.city_id
-FROM store s 
-LEFT JOIN address a
-ON s.address_id = a.address_id 
-LEFT JOIN city ci
-ON a.city_id = ci.city_id 
-LEFT JOIN country cou
-ON ci.country_id = cou.country_id);
+SELECT * FROM customer;
+
 
 
 
