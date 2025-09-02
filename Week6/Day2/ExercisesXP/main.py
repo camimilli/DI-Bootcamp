@@ -9,15 +9,9 @@ active_program = True
 while active_program:
 
     # Display options menu 
-    program = m_e.show_user_menu()
-    if program == False:
+    restaurant_manager_system = m_e.show_user_menu()
+    if restaurant_manager_system == False:
         active_program = False 
-
-        # Close connection to db
-        db.cursor.close()
-        db.connection.close()
-
-        # Break out of the program 
         break 
     else:
         continue
