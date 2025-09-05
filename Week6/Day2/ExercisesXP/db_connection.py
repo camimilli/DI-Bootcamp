@@ -1,5 +1,4 @@
 import psycopg2
-# from psycopg2 import OperationalError
 import config as c 
 
 def get_db_connection():

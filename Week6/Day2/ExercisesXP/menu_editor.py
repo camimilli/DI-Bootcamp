@@ -162,11 +162,6 @@ def show_restaurant_menu():
         print('\n*** Restaurant Menu ***')
         for item in restaurant_menu:
             print(item)
-        #     name = item[0]
-        #     price = item[1]
-        #     print('-'*40)
-        #     print(f"Name: {name} || Price: {price}")
-        # print('\n')
 
 def exit_program():
     '''

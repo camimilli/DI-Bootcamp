@@ -1,16 +1,23 @@
 import pandas as pd 
 
-# # Series - Kind of a "list"
-# data = pd.Series([1, 3, 5, 7, 9])
+## Pandas Structures 
+# Dataframes & Series
 
-# data = {
-#     'Name': ['John', 'Anna', 'Peter', 'Linda'],
-#     'Age': [28, 34, 29, 32],
-#     'City': ['New York', 'Paris', 'Berlin', 'London']
-# }
+# # Series - One-dimensional array-like object, holds any type of data - like a column in spreadsheet
+data = pd.Series([1, 3, 5, 7, 9])
 
-# # DataFrame - List of lists (row/columns)
-# df = pd.DataFrame(data)
+
+# DataFrames - Two-dimensional, size-mutable with rows and columns. Like an SQL table
+data = {
+    'Name': ['John', 'Anna', 'Peter', 'Linda'],
+    'Age': [28, 34, 29, 32],
+    'City': ['New York', 'Paris', 'Berlin', 'London']
+}
+
+df = pd.DataFrame(data)
+
+
+# Basic Operations
 
 # my_series = pd.Series(['New York', ''])
 # my_series.apply(lambda n: n[0])  
