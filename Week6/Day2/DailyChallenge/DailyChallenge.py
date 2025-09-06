@@ -4,6 +4,7 @@ import psycopg2
 import requests
 import json
 import os 
+import config as c
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
@@ -11,11 +12,11 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 
 try:
     connection = psycopg2.connect(
-        database = 'countries',
-        user = 'camilamillicovsky',
-        password = 'Comolashojasdelmar123!',
-        host = 'localhost',
-        port = '5432'
+        database = c.DATABASE,
+        user = c.USER,
+        password = c.PASSWORD,
+        host = c.HOST,
+        port = c.PORT
     )
 except Exception as e:
     print(f"Error: {e}")
